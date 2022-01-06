@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: rbdeployment
+   labels:
+     type: update
+spec:
+   selector:
+     matchLabels:
+       type: frontend
+   replicas: 4
+   template: 
+     metadata:
+       name: nginxcon
+       labels:
+          type: frontend
+     spec:
+       containers:
+          - name: nginxcon
+            image: nginx
+
+       
