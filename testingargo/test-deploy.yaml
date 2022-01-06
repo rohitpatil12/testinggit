@@ -17,6 +17,6 @@ spec:
      spec:
        containers:
           - name: nginxcon
-            image: nginx
+            image: nginx:1.19
 
        
